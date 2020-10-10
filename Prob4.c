@@ -22,11 +22,11 @@ bills_needed billsNeeded(int Total);
 void main(void)
 {
     int totalValue;
-    printf("Please enter you U.S. dollar amount, with no symbols.\n");
+    printf("Please enter your U.S. dollar amount, with no symbols.\n");
     scanf("%d",&totalValue);
     bills_needed smallestBills;
     smallestBills=billsNeeded(totalValue);
-    printf("%d %d %d %d\n",smallestBills.num20s,smallestBills.num10s,smallestBills.num5s,smallestBills.num1s);
+    printf("%d twenties,%d ten's,%d five's,%d one's\n",smallestBills.num20s,smallestBills.num10s,smallestBills.num5s,smallestBills.num1s);
     return;
 }
 

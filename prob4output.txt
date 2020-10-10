@@ -1,0 +1,4 @@
+Please enter your U.S. dollar amount, with no symbols.
+0 twenties,0 ten's,0 five's,1 one's
+Please enter your U.S. dollar amount, with no symbols.
+3 twenties,1 ten's,1 five's,1 one's

@@ -18,7 +18,7 @@ void main(void)
 {
 
     int red = 300;
-    int green = 200;
+    int green = 214;
     int blue = -5;
 
     color_t c, c1, c2, Dark;
@@ -100,7 +100,7 @@ color_t makeDarkerColor(color_t c)
     color_t Darker;
     if (c.red < 255 && c.red > 0)
     {
-        Darker.red = (c.red * 0.7);
+        Darker.red = trunc((c.red * 0.7));
     }
     else
     {
@@ -108,7 +108,7 @@ color_t makeDarkerColor(color_t c)
     }
     if (c.green < 255 && c.green > 0)
     {
-        Darker.green = (c.green * 0.7);
+        Darker.green = trunc((c.green * 0.7));
     }
     else
     {
@@ -116,7 +116,7 @@ color_t makeDarkerColor(color_t c)
     }
     if (c.blue < 255 && c.blue > 0)
     {
-        Darker.blue = (c.blue * 0.7);
+        Darker.blue = trunc((c.blue * 0.7));
     }
     else
     {
