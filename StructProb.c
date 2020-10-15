@@ -1,7 +1,10 @@
+//header
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
 
+//variable def
 typedef struct color
 {
     int red;
@@ -9,6 +12,8 @@ typedef struct color
     int blue;
 } color_t;
 
+
+//function declarations
 color_t makeColor(int red, int green, int blue);
 int getRed(color_t c);
 bool equalColor(color_t c1, color_t c2);
@@ -16,17 +21,22 @@ color_t makeDarkerColor(color_t c);
 
 void main(void)
 {
-
+    //test values
     int red = 300;
     int green = 214;
     int blue = -5;
 
+
+    //declar color structs and fill them using make color
     color_t c, c1, c2, Dark;
     c = makeColor(red, green, blue);
     c1 = makeColor(red, green, blue);
     c2 = makeColor(red, green, blue);
+
+    //use make darker color to make make color c darker
     Dark = makeDarkerColor(c);
 
+    //print struct values to check functions
     printf("%d %d %d\n", c.red, c.green, c.blue);
     printf("%d\n", getRed(c));
     printf("%d\n", equalColor(c1, c2));
@@ -36,9 +46,10 @@ void main(void)
 
 color_t makeColor(int red, int green, int blue)
 {
-
+    //declare new color
     color_t new;
 
+    //fill new color
     if (red > 255)
     {
         new.red = 255;
@@ -76,18 +87,17 @@ color_t makeColor(int red, int green, int blue)
     {
         new.blue = blue;
     }
-
     return new;
 }
 
 int getRed(color_t c)
 {
-
     return c.red;
 }
 
 bool equalColor(color_t c1, color_t c2)
 {
+    //if colors are the same return true
     bool eq;
     if (c1.red == c2.red && c1.green == c2.green && c1.blue == c2.blue)
     {
